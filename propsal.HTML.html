@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashi, Will You Be My Forever? ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url(SPECIAL.PNG);
+            animation: gradientBG 10s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        h1 {
+            font-size: 40px;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        button {
+            font-size: 22px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s ease-in-out;
+        }
+
+        #yes {
+            background: #ff4081;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 20px #ff4081;
+        }
+
+        #yes:hover {
+            background: #e91e63;
+            transform: scale(1.2);
+            box-shadow: 0 0 30px white;
+        }
+
+        #no {
+            background: #ff5252;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        /* Move the "No" button randomly */
+        #no:hover {
+            position: absolute;
+            top: calc(20% + 200px * (Math.random() - 0.5));
+            left: calc(50% + 200px * (Math.random() - 0.5));
+            transition: 0.1s;
+        }
+
+        /* Success and Failure messages */
+        #success, #failure {
+            display: none;
+            font-size: 40px;
+            color: #fff;
+            font-weight: 600;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Love and Sad Messages */
+        #loveMessage, #sadMessage {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 500;
+            margin-top: 20px;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        /* Promise Message */
+        #promiseMessage {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 20px;
+            max-width: 80%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rashi, Will You Be My Forever? 💖</h1>
+        <div class="buttons">
+            <button id="yes" onclick="acceptProposal()">Yes, I Accept! ❤️</button>
+            <button id="no" onclick="rejectProposal()">No ❌</button>
+        </div>
+        <h1 id="success">YAY! ❤️ I Love You, Rashi! 💖</h1>
+        <h1 id="failure">💔 My Heart is Broken... 😞</h1>
+        <p id="loveMessage">
+            I promise to love you in every moment, through every joy and challenge.  
+            You are my happiness, my best friend, my dream come true.  
+            Let's make forever a reality. ❤️
+        </p>
+        <p id="sadMessage">
+            If loving you was a mistake, then my heart never learned right from wrong.  
+            I will always cherish the moments we shared, even if they become just memories.  
+            My heart will always have a place for you, no matter how far you go. 💔
+        </p>
+        <p id="promiseMessage">
+            I will never cheat you, never hurt you. My heart beats only for you.  
+            You are my forever, my one and only love, today and always. ❤️  
+        </p>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="loveSong" autoplay loop>
+        <source src="love-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function acceptProposal() {
+            document.getElementById("success").style.display = "block";
+            document.getElementById("loveMessage").style.display = "block";
+            document.getElementById("promiseMessage").style.display = "block";
+            document.getElementById("failure").style.display = "none";
+            document.getElementById("sadMessage").style.display = "none";
+            alert("She said YES! 🎉💖");
+        }
+
+        function rejectProposal() {
+            document.getElementById("failure").style.display = "block";
+            document.getElementById("sadMessage").style.display = "block";
+            document.getElementById("success").style.display = "none";
+            document.getElementById("loveMessage").style.display = "none";
+            document.getElementById("promiseMessage").style.display = "none";
+            alert("She said NO... 💔");
+        }
+    </script>
+    <!-- Background Music -->
+<audio id="bgMusic" autoplay>
+    <source src="music..mp3" type="audio/mpeg">
+</audio>
+<script>
+    document.addEventListener("click", function() {
+        document.getElementById("bgMusic").play();
+    });
+</script>
+
+
+</body>
+</html>
